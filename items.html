@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Összes recept - Recept Gyűjtemény</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== FEJLÉC ========== -->
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🍽️</span>
+                <span>Recept Gyűjtemény</span>
+            </a>
+            <button class="nav-toggle" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Főoldal</a></li>
+                <li><a href="items.html" class="active"><i class="fas fa-utensils"></i> Receptek</a></li>
+                <li><a href="favorites.html"><i class="fas fa-heart"></i> Kedvencek</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== FŐ TARTALOM ========== -->
+    <main>
+
+        <!-- {{TITLE}} = "Összes recept" -->
+        <!-- {{DESCRIPTION}} = "Böngészd végig teljes receptgyűjteményünket..." -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <span class="page-emoji">📋</span>
+                <h1>Összes recept</h1>
+                <p>Böngészd végig teljes receptgyűjteményünket — szűrhetsz kategória szerint és kereshetsz név alapján</p>
+            </div>
+        </section>
+
+        <!-- {{ITEMS}} behelyettesítve — Táblázat összes recepttel -->
+        <div class="table-wrapper">
+            <div class="table-container animate-in">
+
+                <!-- Szűrő sáv -->
+                <div class="filter-bar">
+                    <span class="filter-label"><i class="fas fa-filter"></i> Szűrés:</span>
+                    <button class="filter-btn active" data-category="all">Összes</button>
+                    <button class="filter-btn" data-category="Magyar konyha">Magyar</button>
+                    <button class="filter-btn" data-category="Olasz konyha">Olasz</button>
+                    <button class="filter-btn" data-category="Indiai konyha">Indiai</button>
+                    <button class="filter-btn" data-category="Ázsiai konyha">Ázsiai</button>
+                    <button class="filter-btn" data-category="Francia konyha">Francia</button>
+                    <button class="filter-btn" data-category="Desszert">Desszert</button>
+                    <button class="filter-btn" data-category="Saláta">Saláta</button>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="search-input" placeholder="Keresés név alapján..." id="searchInput">
+                    </div>
+                </div>
+
+                <!-- Táblázat -->
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Név</th>
+                                <th>Kategória</th>
+                                <th>Leírás</th>
+                                <th>Értékelés</th>
+                                <th>Nehézség</th>
+                                <th><i class="fas fa-heart"></i> Kedvenc</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recipeTableBody">
+
+                            <!-- BEGIN ROW: Recipe.Id = 1 -->
+                            <tr data-category="Magyar konyha">
+                                <td class="td-index">1</td>
+                                <td class="td-name">Guylásleves</td>
+                                <td><span class="badge badge-category hungarian">Magyar konyha</span></td>
+                                <td class="td-desc">Hagyományos magyar gulyásleves sok zöldséggel és fűszerekkel, igazi hungarikum.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="rating-val">4.8</span>
+                                </td>
+                                <td><span class="badge badge-difficulty medium">Közepes</span></td>
+                                <td class="td-fav"><i class="fas fa-heart active"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 1 -->
+
+                            <!-- BEGIN ROW: Recipe.Id = 2 -->
+                            <tr data-category="Magyar konyha">
+                                <td class="td-index">2</td>
+                                <td class="td-name">Túrós csusza</td>
+                                <td><span class="badge badge-category hungarian">Magyar konyha</span></td>
+                                <td class="td-desc">Klasszikus magyar tésztaétel túróval és tejföllel, ropogós szalonnával.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                                    </span>
+                                    <span class="rating-val">4.5</span>
+                                </td>
+                                <td><span class="badge badge-difficulty easy">Könnyű</span></td>
+                                <td class="td-fav"><i class="fas fa-heart active"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 2 -->
+
+                            <!-- BEGIN ROW: Recipe.Id = 3 -->
+                            <tr data-category="Indiai konyha">
+                                <td class="td-index">3</td>
+                                <td class="td-name">Tikka Masala</td>
+                                <td><span class="badge badge-category indian">Indiai konyha</span></td>
+                                <td class="td-desc">Fűszeres indiai csirkés étel krémes paradicsomszószban, rizzsel tálalva.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="rating-val">4.7</span>
+                                </td>
+                                <td><span class="badge badge-difficulty hard">Nehéz</span></td>
+                                <td class="td-fav"><i class="fas fa-heart inactive"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 3 -->
+
+                            <!-- BEGIN ROW: Recipe.Id = 4 -->
+                            <tr data-category="Olasz konyha">
+                                <td class="td-index">4</td>
+                                <td class="td-name">Carbonara spagetti</td>
+                                <td><span class="badge badge-category italian">Olasz konyha</span></td>
+                                <td class="td-desc">Autentikus olasz tészta tojással, parmezán sajttal és guancialéval.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                                    </span>
+                                    <span class="rating-val">4.6</span>
+                                </td>
+                                <td><span class="badge badge-difficulty easy">Könnyű</span></td>
+                                <td class="td-fav"><i class="fas fa-heart active"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 4 -->
+
+                            <!-- BEGIN ROW: Recipe.Id = 5 -->
+                            <tr data-category="Desszert">
+                                <td class="td-index">5</td>
+                                <td class="td-name">Somlói galuska</td>
+                                <td><span class="badge badge-category dessert">Desszert</span></td>
+                                <td class="td-desc">Legendás magyar desszert piskótával, dióval és gazdag csokiöntettel.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="rating-val">4.9</span>
+                                </td>
+                                <td><span class="badge badge-difficulty medium">Közepes</span></td>
+                                <td class="td-fav"><i class="fas fa-heart active"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 5 -->
+
+                            <!-- BEGIN ROW: Recipe.Id = 6 -->
+                            <tr data-category="Ázsiai konyha">
+                                <td class="td-index">6</td>
+                                <td class="td-name">Pad Thai</td>
+                                <td><span class="badge badge-category asian">Ázsiai konyha</span></td>
+                                <td class="td-desc">Thai pirított rizstészta garnélával, mogyoróval és lime-mal.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                    </span>
+                                    <span class="rating-val">4.3</span>
+                                </td>
+                                <td><span class="badge badge-difficulty medium">Közepes</span></td>
+                                <td class="td-fav"><i class="fas fa-heart inactive"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 6 -->
+
+                            <!-- BEGIN ROW: Recipe.Id = 7 -->
+                            <tr data-category="Saláta">
+                                <td class="td-index">7</td>
+                                <td class="td-name">Caesar saláta</td>
+                                <td><span class="badge badge-category salad">Saláta</span></td>
+                                <td class="td-desc">Friss római saláta kenyérkockával, parmezánnal és Caesar öntettel.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                    </span>
+                                    <span class="rating-val">3.8</span>
+                                </td>
+                                <td><span class="badge badge-difficulty easy">Könnyű</span></td>
+                                <td class="td-fav"><i class="fas fa-heart inactive"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 7 -->
+
+                            <!-- BEGIN ROW: Recipe.Id = 8 -->
+                            <tr data-category="Desszert">
+                                <td class="td-index">8</td>
+                                <td class="td-name">Dobos torta</td>
+                                <td><span class="badge badge-category dessert">Desszert</span></td>
+                                <td class="td-desc">Elegáns magyar torta karamellás tetővel és csokoládékrémmel.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="rating-val">4.9</span>
+                                </td>
+                                <td><span class="badge badge-difficulty hard">Nehéz</span></td>
+                                <td class="td-fav"><i class="fas fa-heart active"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 8 -->
+
+                            <!-- BEGIN ROW: Recipe.Id = 9 -->
+                            <tr data-category="Francia konyha">
+                                <td class="td-index">9</td>
+                                <td class="td-name">Ratatouille</td>
+                                <td><span class="badge badge-category french">Francia konyha</span></td>
+                                <td class="td-desc">Provanszi zöldségétel padlizsánnal, cukkinivel és paradicsommal.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                    </span>
+                                    <span class="rating-val">4.1</span>
+                                </td>
+                                <td><span class="badge badge-difficulty medium">Közepes</span></td>
+                                <td class="td-fav"><i class="fas fa-heart inactive"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 9 -->
+
+                            <!-- BEGIN ROW: Recipe.Id = 10 -->
+                            <tr data-category="Magyar konyha">
+                                <td class="td-index">10</td>
+                                <td class="td-name">Lángos</td>
+                                <td><span class="badge badge-category hungarian">Magyar konyha</span></td>
+                                <td class="td-desc">Ropogós, forró magyar street food tejfölös-sajtos feltéttel.</td>
+                                <td class="td-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                                    </span>
+                                    <span class="rating-val">4.4</span>
+                                </td>
+                                <td><span class="badge badge-difficulty easy">Könnyű</span></td>
+                                <td class="td-fav"><i class="fas fa-heart inactive"></i></td>
+                            </tr>
+                            <!-- END ROW: Recipe.Id = 10 -->
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Nincs találat üzenet -->
+                <div class="no-results" id="noResults">
+                    <i class="far fa-frown"></i>
+                    <p>Nincs találat a keresési feltételeknek megfelelően.</p>
+                </div>
+
+                <!-- Táblázat lábléc -->
+                <div class="table-footer">
+                    <span>Összesen: <strong id="resultCount">10</strong> recept</span>
+                    <span>Utoljára frissítve: 2024.01.15 14:32</span>
+                </div>
+
+            </div>
+            <!-- table-container vége -->
+
+            <p class="generated-notice">
+                <i class="fas fa-info-circle"></i>
+                A táblázat tartalma automatikusan generálva &mdash; RecipeApp v1.0 &mdash; Forrás: recipes.json
+            </p>
+        </div>
+
+    </main>
+
+    <!-- ========== LÁBLÉC ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">Recept Gyűjtemény</div>
+            <p>&copy; 2024 Recept Gyűjtemény &mdash; Minden jog fenntartva.</p>
+            <p class="footer-note">Generálta: RecipeApp v1.0 sablonmotor &bull; Sablon: template.html &bull; Iskolai projekt</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="items.html">Receptek</a></li>
+                <li><a href="favorites.html">Kedvencek</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Interaktív szűrés és keresés -->
+    <script>
+        // Mobil menü
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        });
+
+        // Kategória szűrő gombok
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const rows = document.querySelectorAll('#recipeTableBody tr');
+        const noResults = document.getElementById('noResults');
+        const resultCount = document.getElementById('resultCount');
+        const searchInput = document.getElementById('searchInput');
+
+        let activeCategory = 'all';
+
+        function filterTable() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            rows.forEach(function(row) {
+                const category = row.getAttribute('data-category');
+                const name = row.querySelector('.td-name').textContent.toLowerCase();
+
+                const matchesCategory = activeCategory === 'all' || category === activeCategory;
+                const matchesSearch = name.includes(searchTerm);
+
+                if (matchesCategory && matchesSearch) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            resultCount.textContent = visibleCount;
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        filterBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+                activeCategory = this.getAttribute('data-category');
+                filterTable();
+            });
+        });
+
+        searchInput.addEventListener('input', filterTable);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedvenc receptek - Recept Gyűjtemény</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== FEJLÉC ========== -->
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🍽️</span>
+                <span>Recept Gyűjtemény</span>
+            </a>
+            <button class="nav-toggle" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Főoldal</a></li>
+                <li><a href="items.html"><i class="fas fa-utensils"></i> Receptek</a></li>
+                <li><a href="favorites.html" class="active"><i class="fas fa-heart"></i> Kedvencek</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== FŐ TARTALOM ========== -->
+    <main>
+
+        <!-- {{TITLE}} = "Kedvenc receptek" -->
+        <!-- {{DESCRIPTION}} = "A legjobban kedvelt receptjeid egy helyen..." -->
+        <section class="page-hero" style="background: linear-gradient(135deg, #c0392b 0%, #e74c3c 50%, #ec7063 100%);">
+            <div class="page-hero-content">
+                <span class="page-emoji">❤️</span>
+                <h1>Kedvenc receptek</h1>
+                <p>A legjobban kedvelt receptjeid egy helyen — 5 recept kiválasztva a gyűjteményből</p>
+            </div>
+        </section>
+
+        <!-- {{STATS}} behelyettesítve -->
+        <div class="stats-grid" style="margin-bottom: 1rem;">
+            <div class="stat-card animate-in delay-1">
+                <span class="stat-icon">❤️</span>
+                <span class="stat-number">5</span>
+                <span class="stat-label">Kedvenc recept</span>
+            </div>
+            <div class="stat-card animate-in delay-2">
+                <span class="stat-icon">⭐</span>
+                <span class="stat-number">4.7</span>
+                <span class="stat-label">Átlag értékelés</span>
+            </div>
+            <div class="stat-card animate-in delay-3">
+                <span class="stat-icon">⏱️</span>
+                <span class="stat-number">89</span>
+                <span class="stat-label">Átlag perc</span>
+            </div>
+            <div class="stat-card animate-in delay-4">
+                <span class="stat-icon">📂</span>
+                <span class="stat-number">4</span>
+                <span class="stat-label">Kategória</span>
+            </div>
+        </div>
+
+        <!-- {{ITEMS}} behelyettesítve — Kedvenc recept kártyák -->
+        <section class="section">
+            <div class="section-header">
+                <h2>A te kedvenceid</h2>
+                <p>Ezeket a recepteket jelölted meg kedvencként — mind kipróbálásra vár!</p>
+            </div>
+
+            <div class="favorites-grid">
+
+                <!-- BEGIN FAVORITE: Recipe.Id = 1 (IsFavorite = true) -->
+                <article class="favorite-card animate-in delay-1">
+                    <div class="favorite-ribbon">❤ Kedvenc</div>
+                    <div class="recipe-card-img hungarian">
+                        <span class="img-emoji">🍲</span>
+                    </div>
+                    <div class="recipe-card-body">
+                        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.75rem;">
+                            <span class="badge badge-category hungarian">Magyar konyha</span>
+                            <span class="badge badge-difficulty medium">Közepes</span>
+                        </div>
+                        <h3>Gulyásleves</h3>
+                        <p class="recipe-desc">
+                            Hagyományos magyar gulyásleves sok zöldséggel és fűszerekkel.
+                            Igazi hungarikum, amely az egész család kedvence. Friss kenyérrel tálalva a legjobb.
+                        </p>
+                        <div class="recipe-meta">
+                            <span><i class="far fa-clock"></i> 90 perc</span>
+                            <span><i class="fas fa-users"></i> 6 adag</span>
+                        </div>
+                        <div class="fav-ingredients">
+                            <strong><i class="fas fa-carrot"></i> Fő hozzávalók:</strong><br>
+                            Marha hús, burgonya, sárgarépa, paprika, hagyma, paradicsom, csipetke
+                        </div>
+                        <div class="recipe-card-footer">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-number">4.8</span>
+                            </div>
+                            <span style="color: var(--favorite); font-weight: 600; font-size: 0.9rem;">
+                                <i class="fas fa-heart"></i> Kedvenc
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- END FAVORITE: Recipe.Id = 1 -->
+
+                <!-- BEGIN FAVORITE: Recipe.Id = 2 (IsFavorite = true) -->
+                <article class="favorite-card animate-in delay-2">
+                    <div class="favorite-ribbon">❤ Kedvenc</div>
+                    <div class="recipe-card-img hungarian">
+                        <span class="img-emoji">🍝</span>
+                    </div>
+                    <div class="recipe-card-body">
+                        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.75rem;">
+                            <span class="badge badge-category hungarian">Magyar konyha</span>
+                            <span class="badge badge-difficulty easy">Könnyű</span>
+                        </div>
+                        <h3>Túrós csusza</h3>
+                        <p class="recipe-desc">
+                            Klasszikus magyar tésztaétel túróval és tejföllel, ropogós szalonnával a tetején.
+                            Gyors, egyszerű és rendkívül laktató fogás.
+                        </p>
+                        <div class="recipe-meta">
+                            <span><i class="far fa-clock"></i> 30 perc</span>
+                            <span><i class="fas fa-users"></i> 4 adag</span>
+                        </div>
+                        <div class="fav-ingredients">
+                            <strong><i class="fas fa-carrot"></i> Fő hozzávalók:</strong><br>
+                            Házi tészta (csusza), túró, tejföl, füstölt szalonna, só
+                        </div>
+                        <div class="recipe-card-footer">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                                </div>
+                                <span class="rating-number">4.5</span>
+                            </div>
+                            <span style="color: var(--favorite); font-weight: 600; font-size: 0.9rem;">
+                                <i class="fas fa-heart"></i> Kedvenc
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- END FAVORITE: Recipe.Id = 2 -->
+
+                <!-- BEGIN FAVORITE: Recipe.Id = 4 (IsFavorite = true) -->
+                <article class="favorite-card animate-in delay-3">
+                    <div class="favorite-ribbon">❤ Kedvenc</div>
+                    <div class="recipe-card-img italian">
+                        <span class="img-emoji">🍝</span>
+                    </div>
+                    <div class="recipe-card-body">
+                        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.75rem;">
+                            <span class="badge badge-category italian">Olasz konyha</span>
+                            <span class="badge badge-difficulty easy">Könnyű</span>
+                        </div>
+                        <h3>Carbonara spagetti</h3>
+                        <p class="recipe-desc">
+                            Autentikus olasz tészta tojással, parmezán sajttal és ropogós guancialéval.
+                            Egyszerű, mégis fenséges — a valódi római recept szerint.
+                        </p>
+                        <div class="recipe-meta">
+                            <span><i class="far fa-clock"></i> 25 perc</span>
+                            <span><i class="fas fa-users"></i> 4 adag</span>
+                        </div>
+                        <div class="fav-ingredients">
+                            <strong><i class="fas fa-carrot"></i> Fő hozzávalók:</strong><br>
+                            Spagetti, tojás, guanciale (v. pancetta), pecorino sajt, fekete bors
+                        </div>
+                        <div class="recipe-card-footer">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                                </div>
+                                <span class="rating-number">4.6</span>
+                            </div>
+                            <span style="color: var(--favorite); font-weight: 600; font-size: 0.9rem;">
+                                <i class="fas fa-heart"></i> Kedvenc
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- END FAVORITE: Recipe.Id = 4 -->
+
+                <!-- BEGIN FAVORITE: Recipe.Id = 5 (IsFavorite = true) -->
+                <article class="favorite-card animate-in delay-4">
+                    <div class="favorite-ribbon">❤ Kedvenc</div>
+                    <div class="recipe-card-img dessert">
+                        <span class="img-emoji">🍰</span>
+                    </div>
+                    <div class="recipe-card-body">
+                        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.75rem;">
+                            <span class="badge badge-category dessert">Desszert</span>
+                            <span class="badge badge-difficulty medium">Közepes</span>
+                        </div>
+                        <h3>Somlói galuska</h3>
+                        <p class="recipe-desc">
+                            Legendás magyar desszert háromféle piskótával, dióval, mazsolával
+                            és gazdag csokoládéöntettel. Friss tejszínhabbal tálalva ellenállhatatlan.
+                        </p>
+                        <div class="recipe-meta">
+                            <span><i class="far fa-clock"></i> 120 perc</span>
+                            <span><i class="fas fa-users"></i> 8 adag</span>
+                        </div>
+                        <div class="fav-ingredients">
+                            <strong><i class="fas fa-carrot"></i> Fő hozzávalók:</strong><br>
+                            Piskóta, dió, mazsola, vanília puding, csokoládéöntet, tejszínhab, rum
+                        </div>
+                        <div class="recipe-card-footer">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-number">4.9</span>
+                            </div>
+                            <span style="color: var(--favorite); font-weight: 600; font-size: 0.9rem;">
+                                <i class="fas fa-heart"></i> Kedvenc
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <!-- END FAVORITE: Recipe.Id = 5 -->
+
+                <!-- BEGIN FAVORITE: Recipe.Id = 8 (IsFavorite = true) -->
+                <article class="favorite-card animate-in delay-5">
+                    <div class="favorite-ribbon">❤ Kedvenc</div>
+                    <div class="recipe-card-img dessert">
+                        <span class="img-emoji">🎂</span>
+                    </div>
+                    <div class="recipe-card-body">
+                        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.75rem;">
+                            <span class="badge badge-category dessert">Desszert</span>
+                            <span class="badge badge-difficulty hard">Nehéz</span>
+                        </div>
+                        <h3>Dobos torta</h3>
+                        <p class="recipe-desc">
+                            Elegáns magyar torta vékony karamellás tetővel és selymes csokoládékrémmel.
+                            Ünnepi alkalmakra tökéletes választás, igazi cukrász remekmű.
+                        </p>
+                        <div class="recipe-meta">
+                            <span><i class="far fa-clock"></i> 180 perc</span>
+                            <span><i class="fas fa-users"></i> 12 adag</span>
+                        </div>
+                        <div class="fav-ingredients">
+                            <strong><i class="fas fa-carrot"></i> Fő hozzávalók:</strong><br>
+                            Tojás, liszt, cukor, vaj, étcsoki, karamell, vanília
+                        </div>
+                        <div class="recipe-card-footer">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-number">4.9</span>
+                            </div>
+                            <span style="color: var(--favorite); font-weight: 600; font-size: 0.9rem;">
+                                <i class="fas fa-heart"></i> Kedvenc
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== LÁBLÉC ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">🍽️ Recept Gyűjtemény</div>
+            <p>&copy; 2024 Recept Gyűjtemény &mdash; Minden jog fenntartva.</p>
+            <p class="footer-note">Generálta: RecipeApp v1.0 sablonmotor &bull; Sablon: template.html &bull; Iskolai projekt</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="items.html">Receptek</a></li>
+                <li><a href="favorites.html">Kedvencek</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        });
+    </script>
+    <!-- ========== vicces volt sok helyről össze "másolni" ========== -->
+
+
+</body>
+</html>
