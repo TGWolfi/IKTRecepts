@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Összes recept - Recept Gyűjtemény</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== FEJLÉC ========== -->
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🍽️</span>
+                <span>Recept Gyűjtemény</span>
+            </a>
+            <button class="nav-toggle" aria-label="Menü megnyitása">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Főoldal</a></li>
+                <li><a href="items.html"><i class="fas fa-utensils"></i> Receptek</a></li>
+                <li><a href="favorites.html"><i class="fas fa-heart"></i> Kedvencek</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== FŐ TARTALOM ========== -->
+    <main>
+
+        <!-- Oldal fejléc szekció -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1>Összes recept</h1>
+                <p>Teljes lista</p>
+            </div>
+        </section>
+
+        <!-- Statisztikák szekció -->
+        <!-- C# itt generálja a stat-card elemeket -->
+        <section class="stats-grid">
+            
+        </section>
+
+        <!-- Tartalom szekció -->
+        <!-- C# itt generálja a recept kártyákat / táblázatot -->
+        <section class="section">
+            <div class='table-container'><table><thead><tr><th>#</th><th>Név</th><th>Kategória</th><th>Leírás</th><th>Értékelés</th><th>Idő</th><th>Kedvenc</th></tr></thead><tbody><tr><td>1</td><td>Gulyásleves</td><td><span class='badge badge-category'>Magyar konyha</span></td><td>Hagyományos leves</td><td>⭐ 5</td><td>90 perc</td><td>❤️</td></tr><tr><td>2</td><td>Túrós csusza</td><td><span class='badge badge-category'>Magyar konyha</span></td><td>Tészta étel</td><td>⭐ 4</td><td>30 perc</td><td></td></tr><tr><td>3</td><td>Carbonara</td><td><span class='badge badge-category'>Olasz konyha</span></td><td>Olasz tészta</td><td>⭐ 5</td><td>25 perc</td><td>❤️</td></tr></tbody></table></div>
+        </section>
+
+    </main>
+
+    <!-- ========== LÁBLÉC ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">🍽️ Recept Gyűjtemény</div>
+            <p>&copy; 2024 Recept Gyűjtemény &mdash; Minden jog fenntartva.</p>
+            <p class="footer-note">Generálva a RecipeApp v1.0 sablonmotor által</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="items.html">Receptek</a></li>
+                <li><a href="favorites.html">Kedvencek</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Mobil menü -->
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
