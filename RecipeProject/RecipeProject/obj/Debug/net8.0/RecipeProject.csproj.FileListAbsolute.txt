@@ -1,0 +1,15 @@
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\bin\Debug\net8.0\RecipeProject.exe
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\bin\Debug\net8.0\RecipeProject.deps.json
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\bin\Debug\net8.0\RecipeProject.runtimeconfig.json
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\bin\Debug\net8.0\RecipeProject.dll
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\bin\Debug\net8.0\RecipeProject.pdb
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\RecipeProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\RecipeProject.AssemblyInfoInputs.cache
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\RecipeProject.AssemblyInfo.cs
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\RecipeProject.csproj.CoreCompileInputs.cache
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\RecipeProject.sourcelink.json
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\RecipeProject.dll
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\refint\RecipeProject.dll
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\RecipeProject.pdb
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\RecipeProject.genruntimeconfig.cache
+D:\C#\IKTRecepts\RecipeProject\RecipeProject\obj\Debug\net8.0\ref\RecipeProject.dll

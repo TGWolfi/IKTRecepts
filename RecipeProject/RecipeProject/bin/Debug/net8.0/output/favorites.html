@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedvencek - Recept Gyűjtemény</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== FEJLÉC ========== -->
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🍽️</span>
+                <span>Recept Gyűjtemény</span>
+            </a>
+            <button class="nav-toggle" aria-label="Menü megnyitása">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Főoldal</a></li>
+                <li><a href="items.html"><i class="fas fa-utensils"></i> Receptek</a></li>
+                <li><a href="favorites.html"><i class="fas fa-heart"></i> Kedvencek</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== FŐ TARTALOM ========== -->
+    <main>
+
+        <!-- Oldal fejléc szekció -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1>Kedvencek</h1>
+                <p>Kedvenc receptek</p>
+            </div>
+        </section>
+
+        <!-- Statisztikák szekció -->
+        <!-- C# itt generálja a stat-card elemeket -->
+        <section class="stats-grid">
+            
+        </section>
+
+        <!-- Tartalom szekció -->
+        <!-- C# itt generálja a recept kártyákat / táblázatot -->
+        <section class="section">
+            <article class='recipe-card'><div class='favorite-badge active'>❤️</div><div class='recipe-card-body'><span class='badge badge-category'>Magyar konyha</span><h3>Gulyásleves</h3><p class='recipe-desc'>Hagyományos leves</p><div class='recipe-meta'><span>90 perc</span><span>⭐ 5</span></div></div></article><article class='recipe-card'><div class='favorite-badge active'>❤️</div><div class='recipe-card-body'><span class='badge badge-category'>Olasz konyha</span><h3>Carbonara</h3><p class='recipe-desc'>Olasz tészta</p><div class='recipe-meta'><span>25 perc</span><span>⭐ 5</span></div></div></article>
+        </section>
+
+    </main>
+
+    <!-- ========== LÁBLÉC ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">🍽️ Recept Gyűjtemény</div>
+            <p>&copy; 2024 Recept Gyűjtemény &mdash; Minden jog fenntartva.</p>
+            <p class="footer-note">Generálva a RecipeApp v1.0 sablonmotor által</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="items.html">Receptek</a></li>
+                <li><a href="favorites.html">Kedvencek</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Mobil menü -->
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
